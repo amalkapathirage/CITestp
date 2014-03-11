@@ -90,15 +90,15 @@
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
 
-<target name=”fetch-test-report”>
-<echo>Downloading XML test report…</echo>
-<mkdir dir=”junitreports”/>
-<exec executable=”${adb}” failonerror=”true”>
-<arg line=”${adb.device.arg}”/>
-<arg value=”pull” />
-<arg value=”/data/data/${tested.manifest.package}/files/junit-report.xml” />
-<arg value=”junitreports/junit-report.xml” />
-</exec>
-</target>
+	<target name="fetch-test-report">
+		<echo>Downloading XML test reportâ€¦</echo>
+		<mkdir dir=â€junitreportsâ€/>
+		<exec executable=â€${adb}â€ failonerror=â€trueâ€>
+			<arg line=â€${adb.device.arg}â€/>
+			<arg value=â€pullâ€ />
+			<arg value=â€/data/data/${tested.manifest.package}/files/junit-report.xmlâ€ />
+			<arg value=â€junitreports/junit-report.xmlâ€ />
+		</exec>
+	</target>
 
 </project>
